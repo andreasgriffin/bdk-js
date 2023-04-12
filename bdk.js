@@ -1,5 +1,7 @@
 import init from './pkg/js_example.js';  // see https://stackoverflow.com/questions/64308461/failed-to-load-wasm-application
 import * as bdk  from '../pkg/js_example.js';
+window.bdk = bdk;
+
 
 function run () {
 
