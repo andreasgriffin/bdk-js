@@ -1,0 +1,18 @@
+[package]
+name = "js-example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bdk = { version = "0.27.1", default-features = false, features = ["all-keys", "use-esplora-reqwest", "reqwest-default-tls", "async-interface", "dev-getrandom-wasm"] }
+wasm-bindgen = { version = "0.2.84"}
+wasm-bindgen-futures = "0.4.34"
+js-sys = "0.3.61"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
